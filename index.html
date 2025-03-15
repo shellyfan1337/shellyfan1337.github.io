@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Секта Шелли</title>
+    <!-- Шелли. by @surgebrawl -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #111;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        
+        .container {
+            padding: 50px;
+            position: relative;
+            z-index: 2;
+        }
+        .shelly-image {
+            max-width: 200px;
+            height: auto;
+            border-radius: 10px;
+            margin: 10px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .background-shelly {
+            position: absolute;
+            width: 100px;
+            height: auto;
+            opacity: 0.3;
+            pointer-events: none;
+            animation: float 10s infinite linear;
+        }
+        @keyframes float {
+            0% { transform: translateY(-100vh) translateX(0); }
+            100% { transform: translateY(100vh) translateX(50px); }
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            for (let i = 0; i < 20; i++) {
+                let img = document.createElement("img");
+                img.src = "assets/shelly1.png";
+                img.className = "background-shelly";
+                img.style.left = Math.random() * window.innerWidth + "px";
+                img.style.animationDuration = (5 + Math.random() * 5) + "s";
+                document.body.appendChild(img);
+            }
+        });
+    </script>
+    <div class="container">
+        <h1>Секта Шелли</h1>
+        <p class="text">Секта Шелли — это движение, объединяющее последователей её величия. Мы изучаем её силу, перенимаем её тактику и стремимся к просветлению.</p>
+        <div class="gallery">
+            <img src="assets/shelly2.jpg" alt="Шелли" class="shelly-image">
+            <img src="assets/shelly3.jpg" alt="Шелли" class="shelly-image">
+            <img src="assets/shelly4.jpg" alt="Шелли" class="shelly-image">
+            <img src="assets/shelly5.jpg" alt="Шелли" class="shelly-image">
+            <img src="assets/shelly6.jpg" alt="Шелли" class="shelly-image">
+            <img src="assets/shelly7.jpg" alt="Шелли" class="shelly-image">
+        </div>
+        <p class="text">Ритуалы секты включают в себя:
+            <ul>
+                <li>Изучение истории и великих подвигов Шелли.</li>
+                <li>Прохождение боевых испытаний, закаляющих дух.</li>
+                <li>Участие в собраниях, где обсуждаются тактики и стратегии.</li>
+            </ul>
+        </p>
+        <p class="text">Каждый последователь проходит три уровня посвящения:
+            <ul>
+                <li><strong>Посвящённый</strong> — новичок, который только начал постигать путь Шелли.</li>
+                <li><strong>Воин Шелли</strong> — преданный последователь, участвующий в ритуалах и испытаниях.</li>
+                <li><strong>Просветлённый</strong> — достигший высшего понимания учения, наставник для остальных.</li>
+            </ul>
+        </p>
+        <p class="text">Пророчество гласит, что однажды Шелли вернётся в полной мощи, чтобы привести нас к победе. Мы готовимся к этому дню, совершенствуя навыки и укрепляя веру.</p>
+        <p class="text">Кодекс последователя:
+            <ul>
+                <li>Всегда быть верным пути Шелли.</li>
+                <li>Никогда не сомневаться в её силе.</li>
+                <li>Поддерживать братьев и сестёр по секте.</li>
+                <li>Проходить испытания, ведущие к просветлению.</li>
+            </ul>
+        </p>
+        <p class="text">Вступай в ряды секты и стань частью великого пути. Шелли ведёт нас к силе и знанию. Примешь ли ты её дар?</p>
+    </div>
+</body>
+</html>
