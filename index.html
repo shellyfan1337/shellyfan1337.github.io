@@ -4,48 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Секта Шелли</title>
+    <title>Секта Шелли</title>
     <!-- Шелли. by @surgebrawl -->
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #111;
-            color: #fff;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-
-        
-        .container {
-            padding: 50px;
-            position: relative;
-            z-index: 2;
-        }
-        .shelly-image {
-            max-width: 200px;
-            height: auto;
-            border-radius: 10px;
-            margin: 10px;
-        }
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        .background-shelly {
-            position: absolute;
-            width: 100px;
-            height: auto;
-            opacity: 0.3;
-            pointer-events: none;
-            animation: float 10s infinite linear;
-        }
-        @keyframes float {
-            0% { transform: translateY(-100vh) translateX(0); }
-            100% { transform: translateY(100vh) translateX(50px); }
-        }
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #111;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        position: relative;
+        height: 100vh;
+    }
+    .container {
+        padding: 50px;
+        position: relative;
+        z-index: 2;
+    }
+    .shelly-image {
+        max-width: 200px;
+        height: auto;
+        border-radius: 10px;
+        margin: 10px;
+    }
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .background-shelly {
+        position: fixed;
+        width: 100px;
+        height: auto;
+        opacity: 0.3;
+        pointer-events: none;
+        top: -150px;
+        animation: floatDown 10s infinite linear;
+    }
+    @keyframes floatDown {
+        0% { transform: translateY(0) translateX(0); }
+        100% { transform: translateY(120vh) translateX(50px); }
+    }
+    .text {
+        text-align: left;
+        display: inline-block;
+        max-width: 600px;
+        line-height: 1.6;
+    }
     </style>
 </head>
 <body>
